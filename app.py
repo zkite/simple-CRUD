@@ -74,7 +74,7 @@ $(document).ready(function(){
             updated_user['name'] = $('#user_name').val();
 			$('#user_name').val('')
 
-            //send data via PUT
+            //update user
             $.ajax({
                 data: JSON.stringify(updated_user),
                 url: '/users',
@@ -91,7 +91,7 @@ $(document).ready(function(){
             deleted_user['name'] = $('#user_name').val();
 			$('#user_name').val('')
 
-            //send data via PUT
+            //delete user
             $.ajax({
                 data: JSON.stringify(deleted_user),
                 url: '/users',
