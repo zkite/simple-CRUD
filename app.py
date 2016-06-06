@@ -31,13 +31,16 @@ $(document).ready(function(){
             user['name'] = $('#user_name').val();
 			$('#user_name').val('')
 
-            //send data via POST
-            $.ajax({
-                data: JSON.stringify(user),
-                url: '/users',
-                type: 'POST',
-                contentType: 'application/json',
-            })
+			if(user['name'] != '') {
+
+                //send data via POST
+                $.ajax({
+                    data: JSON.stringify(user),
+                    url: '/users',
+                    type: 'POST',
+                    contentType: 'application/json',
+                })
+            }
         })
 
         //method GET
